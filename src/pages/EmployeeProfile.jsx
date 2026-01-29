@@ -98,7 +98,7 @@ const EmployeeProfile = () => {
     const fetchEmployee = async () => {
         try {
             const token = JSON.parse(localStorage.getItem('user'))?.token;
-            const response = await fetch(`http://localhost:5000/api/admin/employees/${id}`, {
+            const response = await fetch(`https://fmat-backend.onrender.com/api/admin/employees/${id}`, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -169,7 +169,7 @@ const EmployeeProfile = () => {
         try {
             const token = JSON.parse(localStorage.getItem('user'))?.token;
 
-            const response = await fetch(`http://localhost:5000/api/admin/employees/${id}`, {
+            const response = await fetch(`https://fmat-backend.onrender.com/api/admin/employees/${id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -242,7 +242,7 @@ const EmployeeProfile = () => {
                                                         src={
                                                             formData.profileImage.startsWith('data:') || formData.profileImage.startsWith('http')
                                                                 ? formData.profileImage
-                                                                : `http://localhost:5000/${formData.profileImage.replace(/\\/g, '/')}`
+                                                                : `https://fmat-backend.onrender.com/${formData.profileImage.replace(/\\/g, '/')}`
                                                         }
                                                         alt="Profile"
                                                         style={{ width: '100%', height: '100%', objectFit: 'cover' }}

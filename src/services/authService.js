@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:5000/api/admin';
+const API_URL = 'https://fmat-backend.onrender.com/api/admin';
 
 // Register admin
 const register = async (userData) => {

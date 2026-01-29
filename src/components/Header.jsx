@@ -17,7 +17,7 @@ const Header = ({ toggleSidebar }) => {
     const fetchNotifications = async () => {
         try {
             if (!user || !user.token) return;
-            const response = await fetch('http://localhost:5000/api/reports/all', {
+            const response = await fetch('https://fmat-backend.onrender.com/api/reports/all', {
                 headers: {
                     'Authorization': `Bearer ${user.token}`
                 }

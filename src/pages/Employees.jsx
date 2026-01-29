@@ -20,7 +20,7 @@ const Employees = () => {
     const fetchEmployees = async () => {
         try {
             const token = JSON.parse(localStorage.getItem('user'))?.token;
-            const response = await fetch('http://localhost:5000/api/admin/employees', {
+            const response = await fetch('https://fmat-backend.onrender.com/api/admin/employees', {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }

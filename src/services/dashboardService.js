@@ -1,6 +1,6 @@
 import authService from './authService';
 
-const API_URL = 'http://localhost:5000/api/admin';
+const API_URL = 'https://fmat-backend.onrender.com/api/admin';
 
 const getStats = async () => {
     const user = authService.getCurrentUser();

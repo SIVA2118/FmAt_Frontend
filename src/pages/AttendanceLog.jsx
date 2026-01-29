@@ -54,7 +54,7 @@ const AttendanceLog = () => {
     const getImageUrl = (path) => {
         if (!path) return '';
         if (path.startsWith('data:') || path.startsWith('http')) return path;
-        return `http://localhost:5000/${path.replace(/\\/g, '/')}`;
+        return `https://fmat-backend.onrender.com/${path.replace(/\\/g, '/')}`;
     };
 
     return (

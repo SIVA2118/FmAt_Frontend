@@ -25,7 +25,7 @@ const Reports = () => {
         try {
             const token = JSON.parse(localStorage.getItem('user'))?.token;
             // Assuming API is running on port 5000 as per other files
-            const response = await fetch('http://localhost:5000/api/reports/all', {
+            const response = await fetch('https://fmat-backend.onrender.com/api/reports/all', {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -82,7 +82,7 @@ const Reports = () => {
     const updateStatus = async (id, newStatus) => {
         try {
             const token = JSON.parse(localStorage.getItem('user'))?.token;
-            const response = await fetch(`http://localhost:5000/api/reports/${id}/status`, {
+            const response = await fetch(`https://fmat-backend.onrender.com/api/reports/${id}/status`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',

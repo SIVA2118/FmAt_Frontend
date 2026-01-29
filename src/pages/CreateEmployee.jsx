@@ -116,7 +116,7 @@ const CreateEmployee = () => {
         try {
             const token = JSON.parse(localStorage.getItem('user'))?.token;
 
-            const response = await fetch('http://localhost:5000/api/admin/register-employee', {
+            const response = await fetch('https://fmat-backend.onrender.com/api/admin/register-employee', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
